@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+    <div class="w-75 m-auto mt-4">
+        <form action="/delete" method="POST">
+            <table class="table table-dark table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Label</th>
+                        <th scope="col">Description</th>
+                        <th scope="col"><input type="checkbox" onclick="selectAll(this)"> Select All</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <th scope="row">{{ item["id"] }}</th>
+                            <td>{{ item["label"] }}</td>
+                            <td>{{ item["description"] }}</td>
+                            <td><input type="checkbox" name="{{ item['id'] }}-select"> Select</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="text-end mt-4">
+                <button type="submit" class="btn btn-secondary">Delete</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

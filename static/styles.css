@@ -1,0 +1,33 @@
+body {
+    background-color: #282b2e;
+}
+
+h1, h5 {
+    color: #fff;
+}
+
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+table th, table td {
+    overflow: hidden;
+}
+
+p {
+    margin-top: 0.2rem; 
+    margin-bottom: 0.2rem;
+}
+
+.form-signup {
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+.bg-default {
+    background-color: #343a40;
+}
